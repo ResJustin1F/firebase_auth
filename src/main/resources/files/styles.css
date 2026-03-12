@@ -18,3 +18,25 @@
     -fx-text-fill: white;
     -fx-font-size: 14px;
 }
+
+/* Login / Register screens */
+.login-root {
+    -fx-background-color: #7A4F1E;
+}
+
+.login-title {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.login-btn {
+    -fx-background-color: #7FFF00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.error-label {
+    -fx-text-fill: #FF4444;
+    -fx-font-size: 13px;
+}

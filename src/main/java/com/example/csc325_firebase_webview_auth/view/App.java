@@ -35,7 +35,7 @@ public class App extends Application {
                 Thread.sleep(3000);
                 Platform.runLater(() -> {
                     try {
-                        setRoot("/files/AccessFBView.fxml");
+                        setRoot("/files/Login.fxml");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
