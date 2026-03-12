@@ -10,7 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.application.Platform;
 /**
  * JavaFX App
  */
@@ -25,9 +25,25 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         fstore = contxtFirebase.firebase();
         fauth = FirebaseAuth.getInstance();
-        scene = new Scene(loadFXML("/files/AccessFBView.fxml"));
+        scene = new Scene(loadFXML("/files/Splash.fxml"), 1000, 650);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Welcome!");
         primaryStage.show();
+
+        new Thread(() -> {
+            try {
+                Thread.sleep(3000);
+                Platform.runLater(() -> {
+                    try {
+                        setRoot("/files/AccessFBView.fxml");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
     public static void setRoot(String fxml) throws IOException {

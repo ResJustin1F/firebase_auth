@@ -1,0 +1,20 @@
+/* Splash Screen*/
+.splash-root {
+    -fx-background-color: #7A4F1E;
+}
+
+.splash-title {
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.splash-subtitle {
+    -fx-text-fill: #7FFF00;
+    -fx-font-size: 24px;
+}
+
+.splash-loading {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
