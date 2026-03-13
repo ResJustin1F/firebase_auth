@@ -51,7 +51,7 @@
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="129.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="profileImageView" fitHeight="150.0" fitWidth="129.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <InnerShadow>
                            <color>
@@ -64,6 +64,11 @@
                      </image>
                   </ImageView>
                </children>
+                <Button text="Upload Photo" onAction="#handleUploadPhoto"
+                        styleClass="main-btn"
+                        prefWidth="163.0"
+                        AnchorPane.leftAnchor="17.0"
+                        AnchorPane.topAnchor="170.0"/>
             </AnchorPane>
              <VBox prefHeight="535.0" HBox.hgrow="ALWAYS" styleClass="center-panel">
                  <children>
