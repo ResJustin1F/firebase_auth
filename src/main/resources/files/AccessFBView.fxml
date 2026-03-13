@@ -17,31 +17,38 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="571.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc325_firebase_webview_auth.view.AccessFBView">
+<AnchorPane prefHeight="571.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc325_firebase_webview_auth.view.AccessFBView" styleClass="main-root" stylesheets="@styles.css">
    <children>
-      <MenuBar layoutY="1.0" prefHeight="27.0" prefWidth="894.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-                  <MenuItem mnemonicParsing="false" text="Register" />
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
+      <MenuBar layoutY="1.0" prefHeight="27.0" prefWidth="894.0" styleClass="main-menubar">
+          <menus>
+              <Menu mnemonicParsing="false" text="File">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Register" onAction="#goToRegister"/>
+                      <MenuItem mnemonicParsing="false" text="Close" onAction="#closeApp"/>
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Delete" onAction="#deleteRecord"/>
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Theme">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Light Theme" onAction="#setLightTheme"/>
+                      <MenuItem mnemonicParsing="false" text="Dark Theme" onAction="#setDarkTheme"/>
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="About" onAction="#showAbout"/>
+                  </items>
+              </Menu>
+          </menus>
+
       </MenuBar>
       <HBox layoutX="6.0" layoutY="28.0" prefHeight="535.0" prefWidth="880.0">
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="129.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
@@ -57,7 +64,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <VBox prefHeight="535.0" prefWidth="551.0">
+            <VBox prefHeight="535.0" prefWidth="551.0" styleClass="center-panel">
                <children>
                   <TextArea fx:id="outputField" prefHeight="184.0" prefWidth="514.0" />
                   <TableView prefHeight="351.0" prefWidth="514.0">
@@ -68,7 +75,7 @@
                   </TableView>
                </children>
             </VBox>
-            <VBox prefHeight="535.0" prefWidth="241.0" spacing="10.0">
+            <VBox prefHeight="535.0" prefWidth="241.0" spacing="10.0" styleClass="input-panel">
                <children>
                   <TextField fx:id="nameField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="272.0" promptText="Name" />
                   <TextField fx:id="majorField" promptText="Major" />

@@ -47,7 +47,7 @@ public class AccessFBView {
         return listOfUsers;
     }
 
-    void initialize() {
+    public void initialize() {
 
         AccessDataViewModel accessDataViewModel = new AccessDataViewModel();
         nameField.textProperty().bindBidirectional(accessDataViewModel.userNameProperty());
@@ -156,5 +156,41 @@ public class AccessFBView {
             return false;
         }
 
+    }
+    @FXML
+    private void goToRegister() throws IOException {
+        App.setRoot("/files/Register.fxml");
+    }
+
+    @FXML
+    private void closeApp() {
+        javafx.application.Platform.exit();
+    }
+
+    @FXML
+    private void deleteRecord() {
+
+        outputField.setText("Delete clicked.");
+    }
+
+    @FXML
+    private void setLightTheme() {
+        App.scene.getStylesheets().clear();
+        App.scene.getStylesheets().add(getClass().getResource("/files/styles.css").toExternalForm());
+    }
+
+    @FXML
+    private void setDarkTheme() {
+        App.scene.getStylesheets().clear();
+
+        outputField.setText("Dark theme selected.");
+    }
+
+    @FXML
+    private void showAbout() {
+        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
+        alert.setTitle("About");
+        alert.setContentText("Created by Justin Restrepo");
+        alert.showAndWait();
     }
 }

@@ -40,3 +40,32 @@
     -fx-text-fill: #FF4444;
     -fx-font-size: 13px;
 }
+
+/* Main Screen */
+.main-root {
+    -fx-background-color: #7A4F1E;
+}
+
+.main-menubar {
+    -fx-background-color: #7A4F1E;
+    -fx-text-fill: white;
+}
+
+.sidebar {
+    -fx-background-color: #7A4F1E;
+}
+
+.center-panel {
+    -fx-background-color: white;
+}
+
+.input-panel {
+    -fx-background-color: #7FFF00;
+}
+
+.main-btn {
+    -fx-background-color: #7A4F1E;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 230px;
+}
